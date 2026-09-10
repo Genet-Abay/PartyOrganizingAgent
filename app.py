@@ -4,7 +4,7 @@
 
 # agent.run("Search for the best music recommendations for a party at the Wayne's mansion.")
 
-from smolagents import CodeAgent, WebSearchTool, InferenceClientModel, VisitWebpageTool, FinalAnswerTool, Tool, tool
+from smolagents import CodeAgent, DuckDuckGoSearchTool, InferenceClientModel, VisitWebpageTool, Tool, tool
 
 @tool
 def suggest_menu(occasion: str) -> str:
@@ -70,7 +70,7 @@ class SuperheroPartyThemeTool(Tool):
 
 agent = CodeAgent(
     tools=[
-        WebSearchTool(),
+        DuckDuckGoSearchTool(),
         VisitWebpageTool(),
         suggest_menu,
         catering_service_tool,
