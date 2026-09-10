@@ -67,7 +67,7 @@ class SuperheroPartyThemeTool(Tool):
         return themes.get(category.lower(), "Themed party idea not found. Try 'classic heroes', 'villain masquerade', or 'futuristic gotham'.")
 
 
-# Alfred, the butler, preparing the menu for the party
+
 agent = CodeAgent(
     tools=[
         WebSearchTool(),
